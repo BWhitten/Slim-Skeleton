@@ -1,7 +1,7 @@
 <?php
 // Routes
 
-$app->get('/chicken', App\ChickenController::class . ':getChicken');
+$app->get('/chicken', App\Plugins\Chickens\ChickenController::class . ':getChicken');
 
 $app->get('/greet/[{name}]', function ($request, $response, $args) {
     // Sample log message

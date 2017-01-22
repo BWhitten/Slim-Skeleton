@@ -13,6 +13,6 @@ $container['logger'] = function ($c) {
 };
 
 // chickens
-$container['App\ChickenController'] = function ($c) {
-    return new App\ChickenController('Marran');
+$container['App\Plugins\Chickens\ChickenController'] = function ($c) {
+    return new App\Plugins\Chickens\ChickenController('Marran');
 };

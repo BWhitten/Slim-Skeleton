@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
- 
+namespace App\Plugins\Chickens;
+
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
- 
+
 class ChickenController
 {
     protected $type;
