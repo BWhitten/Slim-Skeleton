@@ -9,7 +9,7 @@ class HomepageTest extends BaseTestCase
      */
     public function testGetHomepageWithoutName()
     {
-        $response = $this->runApp('GET', '/');
+        $response = $this->runApp('GET', '/greet/');
 
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertContains('message', (string)$response->getBody());
@@ -20,7 +20,7 @@ class HomepageTest extends BaseTestCase
      */
     public function testGetHomepageWithGreeting()
     {
-        $response = $this->runApp('GET', '/name');
+        $response = $this->runApp('GET', '/greet/name');
 
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertContains('Hello name', (string)$response->getBody());
@@ -31,7 +31,7 @@ class HomepageTest extends BaseTestCase
      */
     public function testPostHomepageNotAllowed()
     {
-        $response = $this->runApp('POST', '/', ['test']);
+        $response = $this->runApp('POST', '/greet/', ['test']);
 
         $this->assertEquals(405, $response->getStatusCode());
     }

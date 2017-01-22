@@ -11,3 +11,8 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+// chickens
+$container['App\ChickenController'] = function ($c) {
+    return new App\ChickenController('Marran');
+};
