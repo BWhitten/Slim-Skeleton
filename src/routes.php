@@ -2,6 +2,7 @@
 // Routes
 
 $app->get('/chicken', App\Plugins\Chickens\ChickenController::class . ':getChicken');
+$app->get('/chicken/loader', App\Plugins\Chickens\ChickenController::class . ':getLoader');
 
 $app->get('/greet/[{name}]', function ($request, $response, $args) {
     // Sample log message

@@ -18,4 +18,10 @@ class ChickenController
     {
         return $response->withJson(array('chicken' => $this->type));
     }
+
+    public function getLoader(Request $request, Response $response, $args)
+    {
+        $load = new CantLoad();
+        return $response->withJson(array('loader' => $load->loadTest()));
+    }
 }
